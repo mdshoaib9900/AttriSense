@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function HeroSection() {
   return (
     <motion.div
-      className="max-w-3xl" // Slightly wider container
+      className="max-w-3xl p-[3rem]" // Slightly wider container
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

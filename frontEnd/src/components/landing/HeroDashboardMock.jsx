@@ -43,7 +43,7 @@ export function HeroDashboardMock() {
   return (
     <motion.div
       ref={cardRef}
-      className="relative w-[900px] mt-10 md:mt-10 cursor-pointer"
+      className="relative w-[900px] m-[5rem] md:mt-10 cursor-pointer"
       initial={{ opacity: 0, scale: 0.85, y: 60 }} // Slight adjustment for a cleaner lift
       animate={{ opacity: 1, scale: 1, y: 0 }}
       transition={{ duration: 1.0, ease: "easeOut" }}
@@ -80,12 +80,10 @@ export function HeroDashboardMock() {
       <motion.div
         className="absolute -inset-6 rounded-[40px] pointer-events-none"
         style={{
-          boxShadow: isHovering ? `0px 0px 40px rgba(0, 0, 0, 0.7)`
-            : `0px 0px 40px rgba(0, 0, 0, 0.7)`, // Subtle default shadow
           x: shadowX,
           y: shadowY,
         }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
+        transition={{ type: "spring", stiffness: 70, damping: 20 }}
       />
 
 
