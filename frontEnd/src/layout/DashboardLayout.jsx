@@ -35,7 +35,7 @@ function DashboardLayoutInner({ navigate, logout, user, children }) {
   const { state } = useSidebar();  
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex min-h-screen w-full">
 
       {/* SIDEBAR */}
       <Sidebar collapsible="icon" className="border-r">
@@ -104,15 +104,13 @@ function DashboardLayoutInner({ navigate, logout, user, children }) {
           </button>
         </SidebarFooter>
 
+      <SidebarRail />
       </Sidebar>
 
-      {/* DRAG-TO-ADJUST RAIL */}
-      <SidebarRail />
 
-      {/* MAIN CONTENT */}
-      <main className="flex-1 p-8 bg-gray-50">
-        {children}
-      </main>
+            <main className="flex-1 min-h-screen bg-[#0b1120] p-0 m-0 w-full">
+  <div className="w-full h-full">{children}</div>
+</main>
 
     </div>
   );
