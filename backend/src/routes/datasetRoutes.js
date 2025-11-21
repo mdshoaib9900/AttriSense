@@ -5,6 +5,7 @@ const {
   uploadDataset,
   getMyDataset,
   deleteMyDataset,
+  analyzeDataset
 } = require("../controllers/datasetController");
 
 // Upload OR Replace dataset
@@ -15,5 +16,8 @@ router.get("/mine", authMiddleware, getMyDataset);
 
 // Delete current user's dataset
 router.delete("/mine", authMiddleware, deleteMyDataset);
+//retrive and analyze dataset from supabse
+router.get("/analyze", authMiddleware, analyzeDataset);
+
 
 module.exports = router;
