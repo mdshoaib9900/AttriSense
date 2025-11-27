@@ -1,0 +1,46 @@
+Feature,Importance
+MonthlyIncome,247
+DailyRate,220
+MonthlyRate,190
+DistanceFromHome,150
+Age,129
+HourlyRate,127
+JobSatisfaction,126
+YearsWithCurrManager,122
+RelationshipSatisfaction,122
+JobInvolvement,116
+EnvironmentSatisfaction,111
+OverTime_Yes,79
+NumCompaniesWorked,79
+PercentSalaryHike,79
+StockOptionLevel,73
+YearsInCurrentRole,72
+YearsSinceLastPromotion,68
+BusinessTravel_Travel_Frequently,66
+WorkLifeBalance,66
+TotalWorkingYears,63
+TrainingTimesLastYear,62
+YearsAtCompany,61
+JobRole_Laboratory Technician,58
+MaritalStatus_Single,56
+Department_Sales,56
+BusinessTravel_Travel_Rarely,50
+Gender_Male,50
+MaritalStatus_Married,44
+EducationField_Medical,35
+Education,35
+EducationField_Marketing,34
+JobLevel,32
+EducationField_Life Sciences,23
+EducationField_Technical Degree,22
+JobRole_Research Scientist,20
+JobRole_Sales Executive,18
+JobRole_Sales Representative,12
+JobRole_Human Resources,9
+Department_Research & Development,8
+JobRole_Manufacturing Director,4
+EducationField_Other,4
+JobRole_Manager,1
+JobRole_Research Director,1
+PerformanceRating,0
+BusinessTravel_TravelRarely,0

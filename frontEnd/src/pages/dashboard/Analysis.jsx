@@ -1,8 +1,9 @@
 import React from 'react'
+import PredictForm from './PredictionForm'
 
 function Analysis() {
   return (
-    <div>Analysis</div>
+    <PredictForm/>
   )
 }
 
