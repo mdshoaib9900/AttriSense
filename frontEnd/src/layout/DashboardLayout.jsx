@@ -70,6 +70,12 @@ function DashboardLayoutInner({ navigate, logout, user, children }) {
                 <span className="text-xl font-bold cursor-pointer">Analysis</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
+             <SidebarMenuItem>
+              <SidebarMenuButton onClick={() => navigate("/dashboard/employees")}>
+                <Home />
+                <span className="text-xl font-bold cursor-pointer">Employees</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
 
             <SidebarMenuItem>
               <SidebarMenuButton onClick={() => navigate("/dashboard/settings")}>

@@ -404,6 +404,38 @@ function extractIncome(r) {
     isSlab: false,
   };
 }
+const getAllRows = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const dataset = await Dataset.findOne({ userId });
+
+    if (!dataset) {
+      return res.status(404).json({ message: "No dataset found" });
+    }
+
+    // Download file
+    const fileResponse = await axios.get(dataset.firebaseURL, { responseType: "arraybuffer" });
+    const buffer = fileResponse.data;
+    let rows = [];
+
+    if (dataset.fileName.toLowerCase().endsWith(".csv")) {
+      const csvText = Buffer.from(buffer).toString("utf-8");
+      rows = Papa.parse(csvText, { header: true, dynamicTyping: true }).data;
+    } else {
+      const workbook = XLSX.read(buffer, { type: "buffer" });
+      const sheetName = workbook.SheetNames[0];
+      rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { raw: false, defval: null });
+    }
+
+    return res.status(200).json({ rows });
+
+  } catch (err) {
+    console.error("Get rows error:", err);
+    return res.status(500).json({ message: "Server error" });
+  }
+};
+
+
 
 
 
@@ -412,5 +444,6 @@ module.exports = {
   uploadDataset,
   getMyDataset,
   deleteMyDataset,
-  analyzeDataset
+  analyzeDataset,
+  getAllRows
 };

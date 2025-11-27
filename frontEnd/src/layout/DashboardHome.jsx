@@ -134,7 +134,7 @@ export default function DashboardHome() {
 
         {/* Header */}
         <header className="flex items-center justify-between mb-6">
-          <h1 className="text-3xl font-bold">HR Attrition Dashboard</h1>
+          <h1 className="text-3xl font-bold">Dashboard</h1>
           <div className="text-sm text-slate-400">
             {dataset?.fileName}
           </div>

@@ -133,6 +133,7 @@ import DashboardHome from "@/layout/DashboardHome";
 import UploadDataset from "@/pages/dashboard/UploadDataset";
 import Analysis from "@/pages/dashboard/Analysis";
 import Settings from "@/pages/dashboard/Settings";
+import EmployeeList from "./pages/dashboard/EmployeeList";
 import { Toaster } from "sonner";
 
 export default function App() {
@@ -199,6 +200,15 @@ export default function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/dashboard/employees" element={
+          <ProtectedRoute>
+          <DashboardLayout>
+
+          <EmployeeList />
+          </DashboardLayout>
+          </ProtectedRoute>
+          } />
+
 
         <Route
           path="/dashboard/analysis"
