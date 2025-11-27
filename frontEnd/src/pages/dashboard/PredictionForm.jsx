@@ -266,7 +266,7 @@ export default function PredictForm() {
         {result && (
           <div className="bg-[#1e293b] border-t border-slate-800 p-6 text-center">
             <h3 className="text-lg font-semibold mb-2">
-              Attrition Prediction:{result.risk.toFixed(2)}%
+              Attrition Prediction: {result.attrition}
             </h3>
             <p className="text-blue-400 text-xl font-bold">
               Risk Score: {result.risk}%

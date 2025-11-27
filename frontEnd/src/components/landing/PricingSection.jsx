@@ -171,7 +171,7 @@ export function PricingSection() {
                 {plan.monthlyPrice !== null ? (
                   <>
                     <p className="text-6xl font-extrabold text-white">
-                      ${isMonthly ? plan.monthlyPrice : plan.annualPrice}
+                      ₹{isMonthly ? plan.monthlyPrice : plan.annualPrice}
                     </p>
                     <p className="text-slate-400 mt-1">
                       {isMonthly ? 'per month' : 'per year (billed annually)'}
